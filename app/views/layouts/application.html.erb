@@ -7,7 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-		
+		<header>
+			<h1>David B Hurley</h1>
+			<h2>Web Developer</h2>
+			<% if current_user %>
+				<%= link_to "Quit", sessions_destroy_path %>
+				<%= link_to "Play Again", edit_user_path(current_user) %>
+			<% end %>
+		</header>
 
 <%= yield %>
 

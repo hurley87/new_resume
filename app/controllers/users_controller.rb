@@ -18,10 +18,11 @@ class UsersController < ApplicationController
     end
   end
 
-  def update
+  def edit
+    @user = User.find(params[:id])
   end
 
-  def edit
+  def update
   end
 
   private 

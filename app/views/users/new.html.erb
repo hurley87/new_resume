@@ -1,0 +1,25 @@
+<h1>David B Hurley</h1>
+<h3>Web Developer</h3>
+
+<%= form_for(@user) do |f|  %>
+	
+	<% if @user.errors.messages.any? %>
+		<% @user.errors.full_messages.each do |msg| %>
+			<p><%= msg  %></p>
+		<% end %>
+	<% end %>
+
+	<%= f.hidden_field :time  %>
+
+	<p><%= f.label :name  %><br>
+	<%= f.text_field :name  %></p>
+
+	<p><%= f.label :password  %><br>
+	<%= f.password_field :password %></p>
+
+	<p><%= f.label :password_confirmation, "Confirm"  %><br>
+	<%= f.password_field :password_confirmation %></p>
+
+	<%= f.submit("Start Game")%>
+
+<% end %>

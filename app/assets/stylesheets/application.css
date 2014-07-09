@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+.letter {
+	padding: 5px;
+}
+
+.circle {
+height: 200px;
+width: 200px;
+background-color: yellow;
+border-radius: 100px;
+position: relative;
+
+}
+
+#game {
+height: 300px;
+width: 800px;
+}

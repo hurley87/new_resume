@@ -1,24 +1,58 @@
+<div  class="clock">
+		<span id="seconds">00</span>:<span id="minutes">00</span>
+</div>
+<div class="message">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</div>
 
+<button id="start">Start Game</button>
 
-<%= form_for(@user) do |f|  %>
-	
-	<% if @user.errors.messages.any? %>
-		<% @user.errors.full_messages.each do |msg| %>
-			<p><%= msg  %></p>
+<div id="new-user-form">
+	<%= form_for(@user) do |f|  %>
+		
+		<% if @user.errors.messages.any? %>
+			<% @user.errors.full_messages.each do |msg| %>
+				<p><%= msg  %></p>
+			<% end %>
 		<% end %>
+
+		<%= f.hidden_field :time  %>
+
+		<p><%= f.label :name  %><br>
+		<%= f.text_field :name  %></p>
+
+		<p><%= f.label :password  %><br>
+		<%= f.password_field :password %></p>
+
+		<p><%= f.label :password_confirmation, "Confirm"  %><br>
+		<%= f.password_field :password_confirmation %></p>
+
+		<%= f.submit("Save Your Time")%>
+
 	<% end %>
+</div>
 
-	<%= f.hidden_field :time  %>
-
-	<p><%= f.label :name  %><br>
-	<%= f.text_field :name  %></p>
-
-	<p><%= f.label :password  %><br>
-	<%= f.password_field :password %></p>
-
-	<p><%= f.label :password_confirmation, "Confirm"  %><br>
-	<%= f.password_field :password_confirmation %></p>
-
-	<%= f.submit("Start Game")%>
-
-<% end %>
+<div class="first-game">
+	<h2>Guess my Middle Name</h2>
+	<svg id="stickman" width="300" height="250">
+	  <line x1="150" y1="0" x2="150" y2="10"  stroke="#000" stroke-width="4"/>
+	  <line x1="50" y1="0" x2="150" y2="0"  stroke="#000" stroke-width="4"/>
+	  <line x1="50" y1="0" x2="50" y2="250"  stroke="#000" stroke-width="4"/>
+	  <line x1="10" y1="250" x2="200" y2="250"  stroke="#000" stroke-width="4"/>
+	 <circle id="head" cx="150" cy="50" r="40" stroke="#000" stroke-width="4" />
+	<line id="body" x1="150" y1="90" x2="150" y2="160" stroke="#000" stroke-width="4"/>
+	<line id="leg1" x1="150" y1="160" x2="195" y2="220" stroke="#000" stroke-width="4"/>
+	<line id="leg2" x1="150" y1="160" x2="105" y2="220" stroke="#000" stroke-width="4"/>
+	<line id="arm1" x1="150" y1="125" x2="195" y2="100" stroke="#000" stroke-width="4"/>
+	<line id="arm2" x1="150" y1="125" x2="105" y2="100" stroke="#000" stroke-width="4"/>
+</svg>
+<h2 class="name"></h2>
+<div class="letters">
+	<div class="row"></div>	
+	<div class="row"></div>	
+</div>
+	
+</div>
+<div class="second-game">
+	<h2>It's Bernard!</h2>
+	<h3>Now try this game:</h3>
+	<div id="game">yo</div>
+</div>

@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def index
+    @users = User.order(time: :asc)
   end
 
   def new

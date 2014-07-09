@@ -8,15 +8,15 @@
 </head>
 <body>
 		<header>
-			<h1>David B Hurley</h1>
-			<h2>Web Developer</h2>
+			<h1 class="center">David B Hurley</h1>
+			<h2 class="center">Web Developer</h2>
 			<% if current_user %>
 				<%= link_to "Quit", sessions_destroy_path %>
 				<%= link_to "Play Again", edit_user_path(current_user) %>
 			<% end %>
 		</header>
-
-<%= yield %>
-
+		<div class="container">
+			<%= yield %>
+		</div>
 </body>
 </html>

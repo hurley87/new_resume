@@ -1,9 +1,9 @@
-<div  class="clock">
+<div  class="clock center">
 		<span id="seconds">00</span>:<span id="minutes">00</span>
 </div>
 <div class="message">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</div>
 
-<button id="start">Start Game</button>
+<p class="center"><button id="start">Start Game</button></p>
 
 <div id="new-user-form">
 	<%= form_for(@user) do |f|  %>
@@ -25,13 +25,15 @@
 		<p><%= f.label :password_confirmation, "Confirm"  %><br>
 		<%= f.password_field :password_confirmation %></p>
 
-		<%= f.submit("Save Your Time")%>
+		<p class="center"><%= f.submit("Save Your Time")%></p>
 
 	<% end %>
 </div>
 
-<div class="first-game">
-	<h2>Guess my Middle Name</h2>
+<div class="first-game center">
+	<h2>What's my Middle Name?</h2>
+	<br>
+	<br>
 	<svg id="stickman" width="300" height="250">
 	  <line x1="150" y1="0" x2="150" y2="10"  stroke="#000" stroke-width="4"/>
 	  <line x1="50" y1="0" x2="150" y2="0"  stroke="#000" stroke-width="4"/>
@@ -45,14 +47,17 @@
 	<line id="arm2" x1="150" y1="125" x2="105" y2="100" stroke="#000" stroke-width="4"/>
 </svg>
 <h2 class="name"></h2>
+<br>
+<br>
 <div class="letters">
-	<div class="row"></div>	
-	<div class="row"></div>	
+	<div class="row center"></div>	
+	<div class="row center"></div>	
 </div>
 	
 </div>
-<div class="second-game">
+<div class="second-game center">
 	<h2>It's Bernard!</h2>
 	<h3>Now try this game:</h3>
-	<div id="game">yo</div>
+	<div id="game"></div>
+	<h2>I got the skills!</h2>
 </div>

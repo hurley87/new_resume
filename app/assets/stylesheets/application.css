@@ -13,9 +13,28 @@
  *= require_tree .
  *= require_self
  */
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700);
 
+body {
+	font-family: 'Lora', serif !important;
+	margin: 0;
+	padding: 0;
+}
 .letter {
 	padding: 5px;
+	font-size: 2em;
+}
+.letter:hover {
+	color: white;
+	background-color: black;
+}
+
+.center {
+	text-align: center;
+}
+.container {
+	width: 85%;
+	margin: auto;
 }
 
 .circle {
@@ -30,4 +49,5 @@ position: relative;
 #game {
 height: 300px;
 width: 800px;
+margin: auto;
 }

@@ -3,32 +3,10 @@
 </div>
 <div class="message">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</div>
 
-<p class="center"><button id="start">Start Game</button></p>
+<p class="center"><button class="submit_btn" id="start">Start Game</button></p>
+<br>
 
-<div id="new-user-form">
-	<%= form_for(@user) do |f|  %>
-		
-		<% if @user.errors.messages.any? %>
-			<% @user.errors.full_messages.each do |msg| %>
-				<p><%= msg  %></p>
-			<% end %>
-		<% end %>
-
-		<%= f.hidden_field :time  %>
-
-		<p><%= f.label :name  %><br>
-		<%= f.text_field :name  %></p>
-
-		<p><%= f.label :password  %><br>
-		<%= f.password_field :password %></p>
-
-		<p><%= f.label :password_confirmation, "Confirm"  %><br>
-		<%= f.password_field :password_confirmation %></p>
-
-		<p class="center"><%= f.submit("Save Your Time")%></p>
-
-	<% end %>
-</div>
+<p class="center" id="quote"></p>
 
 <div class="first-game center">
 	<h2>What's my Middle Name?</h2>
@@ -57,7 +35,54 @@
 </div>
 <div class="second-game center">
 	<h2>It's Bernard!</h2>
-	<h3>Now try this game:</h3>
+	<h3>Click each circle:</h3>
 	<div id="game"></div>
-	<h2>I got the skills!</h2>
+	<br class="clear">
+	<h2 class="center">I got the skills!</h2>
+		<div id="skill_charts">
+			<span id="HTML5" class="chart" data-percent="90"><span class="percent">HTML5</span></span>
+
+			<span id="jQuery" class="chart" data-percent="80"><span class="percent">jQuery</span></span>
+			
+			<span id="Ruby" class="chart" data-percent="70"><span class="percent">Ruby</span></span>
+	
+			<span id="Rails" class="chart" data-percent="75"><span class="percent">Rails</span></span>
+
+			<span id="JS" class="chart" data-percent="80"><span class="percent">JS</span></span>
+
+			<span id="AJAX" class="chart" data-percent="85"><span class="percent">AJAX</span></span>
+		</div>	
 </div>
+ 
+ <div id="new-user-form">
+ 		<h4 class="center"><span id='winTime'></span></h4>
+ 		<h4 class="center">Sign up to save your time!</h4>
+	<%= form_for(@user) do |f|  %>
+		
+		<% if @user.errors.messages.any? %>
+			<% @user.errors.full_messages.each do |msg| %>
+				<p><%= msg  %></p>
+			<% end %>
+		<% end %>
+
+		<%= f.hidden_field :time  %>
+
+		<p><%= f.label :name  %><br>
+		<%= f.text_field :name  %></p>
+	
+		<p><%= f.label :email  %><br>
+		<%= f.text_field :email  %></p>
+	
+		<p><%= f.label :password  %><br>
+		<%= f.password_field :password %></p>
+		
+		<p><%= f.label :password_confirmation, "Confirm"  %><br>
+		<%= f.password_field :password_confirmation %></p>
+
+	
+		<p class="center"><%= f.submit "Save Your Time", class: "submit_btn" %></p>
+
+	<% end %>
+</div>
+
+		

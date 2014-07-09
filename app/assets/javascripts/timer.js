@@ -6,6 +6,11 @@
         $("#seconds").text(pad(parseInt(totalSeconds/60)));
     }
 
+    function returnTime() 
+    {
+        return totalSeconds;
+    }
+
     function pad(val)
     {
         var valString = val + "";

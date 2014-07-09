@@ -15,25 +15,4 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function() {
 
-			$('.clock').hide();
-			$('#new-user-form').hide();
-			$('.first-game').hide();
-			$('.second-game').hide();
-
-			var hangman = new Hangman();
-			hangman.render();
-			
-			$('#start').on('click', function() {
-				setInterval(setTime, 1000);
-				$(this).fadeOut();
-				$(".message").fadeOut(1000);
-				$('.clock').show(1000);
-				$('.first-game').show(1000);
-			});
-
-			var game = new Game();
-      game.start();
-
-});

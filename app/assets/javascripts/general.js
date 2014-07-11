@@ -4,6 +4,8 @@ $(document).ready(function() {
 			$('#new-user-form').hide();
 			$('.first-game').hide();
 			$('.second-game').hide();
+      $('#new-user-form').hide();
+       $('#audio').hide();
 
 			var hangman = new Hangman();
 			hangman.render();
@@ -15,6 +17,8 @@ $(document).ready(function() {
 				$('.clock').fadeIn(1000);
 				$('.first-game').fadeIn(1000);
 				$('#quote').remove();
+        $('header').slideUp(3000);
+        audio.play();
 			});
 
 			var game = new Game();
@@ -25,8 +29,8 @@ $(document).ready(function() {
       setInterval(function () {
        var colors = ["#9A12B3", "#F62459", "#52B3D9", "#2ECC71", "#F89406", "#F7CA18", "#D35400"];
        var rand =  Math.floor((Math.random() * colors.length));
-       var x = Math.floor((Math.random() * 1000));
-       var y = Math.floor((Math.random() * 1000));
+       var x = Math.floor((Math.random() * 800));
+       var y = Math.floor((Math.random() * 800));
        $('.circle2').css({
           left: x,
           top: y,
@@ -34,7 +38,7 @@ $(document).ready(function() {
           backgroundColor: colors[rand]
         });
        $('.container').append("<div class='circle2'></div>");
-       $('.circle2').show(2000).hide(2000);
+       $('.circle2').show(1000).hide(1000);
 
     }, 4000);
 
@@ -56,18 +60,6 @@ $(document).ready(function() {
        $('#quote').text(quotes[rand]).fadeIn(1000).fadeOut(2500);
     }, 4000);
 
-	
-		$('.chart').each(function(){
-			$(this).easyPieChart({
-					size:140,
-					animate: 2000,
-					lineCap:'butt',
-					scaleColor: false,
-					barColor: "#EF4836",
-					trackColor: 'transparent',
-					lineWidth: 10
-				});
-		});
 	
 
 });

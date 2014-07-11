@@ -1,7 +1,8 @@
 
 
 function Hangman() {
-		this.start_a = ["-", "-", "-", "-", "-", "-", "-"];
+		$('#plus_five').hide();
+		this.start_a = ["_", "_", "_", "_", "_", "_", "_"];
 		this.end_a = ["b", "e", "r", "n", "a", "r", "d"];
 		this.count = 0;
 
@@ -33,15 +34,16 @@ function Hangman() {
 					var index = self.end_a.indexOf(letter);
 					if (index === -1) {
 						$(body[self.count]).show();
+						totalSeconds += 5;
+						$('#plus_five').fadeIn(500).fadeOut(500);
 						self.count++;
 					} else if(letter === "r") {
 						self.start_a[2] = "r";
 						self.start_a[5] = "r";
 					} else {
 						self.start_a[index] = letter;
-						
 					}
-					$('.name').text(self.start_a.join(""));
+					$('.name').text(self.start_a.join("")).fadeIn(500);
 					$(this).fadeOut(200);
 					self.checkWin(self.start_a);
 			});

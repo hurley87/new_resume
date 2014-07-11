@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    @users = User.order(time: :asc)
   end
 
   def create

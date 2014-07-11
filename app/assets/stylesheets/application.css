@@ -14,6 +14,7 @@
  *= require_self
  */
 @import url(http://fonts.googleapis.com/css?family=Lora:400,700);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
 
 body {
 	font-family: 'Lora', serif !important;
@@ -23,10 +24,21 @@ body {
 .letter {
 	padding: 5px;
 	font-size: 2em;
+	height: 20px;
+	width: 20px;
+	border-radius: 100px;
+	padding: 20px;
+	margin: 20px;
+	background-color: #EF4836;
+	color: white;
+	display: inline;
 }
 .letter:hover {
-	color: white;
-	background-color: #EF4836;
+	color: black;
+}
+
+.row {
+	margin-bottom: 40px;
 }
 .pull-right {
 	float: right;
@@ -48,11 +60,11 @@ body {
 }
 
 .circle {
-height: 200px;
-width: 200px;
+height: 100px;
+width: 100px;
 background-color: #EF4836;
 color: white;
-border-radius: 100px;
+border-radius: 50px;
 position: relative;
 padding: 10px;
 float: left;
@@ -73,6 +85,10 @@ float: left;
 
 .message {
 	margin: 100px;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 2px;
+	line-height: 125%;
+	font-size: 1.5em;
 }
 
 .clock {
@@ -84,8 +100,18 @@ float: left;
 	height: 200px;
 	width: 75%;
 	float:left;
+	margin-left: 100px;
 }
 
+#time_best {
+	font-size: 0.2em;
+	color: black;
+}
+
+#plus_five {
+	margin-right: 40px;
+
+}
 .leaderboard {
 	width: 20%;
 	margin: auto;
@@ -146,6 +172,13 @@ header a:hover {
 #quote {
 	color: #EF4836;
 	font-size: 2em;
+}
+
+.name {
+	color: red;
+	font-size: 3em;
+	font-weight: 100;
+	letter-spacing: 5px;
 }
 
 #winTime {

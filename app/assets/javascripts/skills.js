@@ -13,7 +13,15 @@
             this.circles[i].move();
             $('#'+skills[i]).hide();
           }
-        };  
+
+          $('#game').on('click', function(event) {
+               if(event.target == $('#game')[0]) {
+                  totalSeconds += 5;
+                  $('#plus_five').fadeIn(500).fadeOut(500);
+               }
+          });
+        }; 
+
      }
     
 
@@ -54,15 +62,24 @@
 
       this.kill = function() {
           var skill = this.$me.text();
-          $('#'+skill).fadeIn(800);
+          $('#'+skill).fadeIn(800).easyPieChart({
+          size:140,
+          animate: 2000,
+          lineCap:'butt',
+          scaleColor: false,
+          barColor: "#EF4836",
+          trackColor: 'transparent',
+          lineWidth: 10
+        });;
           this.$me.css('background-color', '#EF4836').fadeOut(500);
           this.$me.remove();
           if ($('#game').children().length == 0) {
               $('.second-game').fadeOut(1500);
-              $('#new-user-form').fadeIn(1000);
+              $('#new-user-form').slideDown(3000);
               $('#winTime').text(totalSeconds);
               $('#user_time').val(totalSeconds);
               $('.clock').hide();
+              $('header').slideDown(3000);
           }
 
       };

@@ -1,5 +1,9 @@
 <div  class="clock center">
-		<span id="plus_five">+5</span><span id="seconds">00</span>:<span id="minutes">00</span><span id="time_best">(<%= @users[0].time %> is the time to beat).</span>
+	
+		<span id="plus_five">+5</span><span id="seconds">00</span>:<span id="minutes">00</span>
+		<% if @users.count > 0 %>
+			<span id="time_best">(<%= @users[0].time %> is the time to beat).</span>
+		<% end %>	
 </div>
 
 <div class="message">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</div>

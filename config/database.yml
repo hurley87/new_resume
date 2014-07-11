@@ -22,5 +22,5 @@ test:
 
 production:
   adapter: postgresql
-  database: resume
+  database: dfilo3mcs0sk7e
   host: localhost

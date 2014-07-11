@@ -1,0 +1,193 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+body {
+	font-family: 'Lora', serif !important;
+	margin: 0;
+	padding: 0;
+}
+.letter {
+	padding: 5px;
+	font-size: 2em;
+	height: 20px;
+	width: 20px;
+	border-radius: 100px;
+	padding: 20px;
+	margin: 20px;
+	background-color: #EF4836;
+	color: white;
+	display: inline;
+}
+.letter:hover {
+	color: black;
+}
+
+.row {
+	margin-bottom: 40px;
+}
+.pull-right {
+	float: right;
+}
+
+.center {
+	text-align: center;
+}
+.clear {
+	clear: both;
+}
+
+.text-right {
+	text-align: right;
+}
+.container {
+	width: 80%;
+	margin: auto;
+}
+
+.circle {
+height: 100px;
+width: 100px;
+background-color: #EF4836;
+color: white;
+border-radius: 50px;
+position: relative;
+padding: 10px;
+float: left;
+
+}
+
+.circle2 {
+	position: absolute;
+	height: 200px;
+	width: 200px;
+	border-radius: 100px;
+	opacity: 0.3;
+	background-color: red;
+	top: 300;
+	left: 300;
+	z-index: -1;
+}
+
+.message {
+	margin: 100px;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 2px;
+	line-height: 125%;
+	font-size: 1.5em;
+}
+
+.clock {
+	font-size: 2.5em;
+	color: #EF4836;
+}
+
+#game {
+	height: 200px;
+	width: 75%;
+	float:left;
+	margin-left: 100px;
+}
+
+#time_best {
+	font-size: 0.2em;
+	color: black;
+}
+
+#plus_five {
+	margin-right: 40px;
+
+}
+.leaderboard {
+	width: 20%;
+	margin: auto;
+}
+.leaderboard h3 {
+	border-bottom: 1px solid black;
+	margin-bottom: 5px;
+}
+
+.submit_btn {
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1.5em;
+}
+.submit_btn:hover {
+	color: #EF4836;
+	border: 1px solid #EF4836;
+}
+
+header {
+	background-color: #EF4836;
+	margin: 0;
+	color: white;
+}
+header h1 {
+	margin: 0;
+	
+}
+header p {
+	margin-right: 50px;
+}
+header a {
+	text-decoration: none;
+	width: 20px;
+	color: white;
+}
+
+header a:hover {
+	color: black;
+}
+
+#new-user-form {
+	width: 25%;
+	margin: auto;
+
+}
+
+#new-user-form input{
+		width: 100%;
+		font-size: 1.5em;
+		background-color: #EF4836;
+		border: none;
+		color: white;
+}
+
+#quote {
+	color: #EF4836;
+	font-size: 2em;
+}
+
+.name {
+	color: red;
+	font-size: 3em;
+	font-weight: 100;
+	letter-spacing: 5px;
+}
+
+#winTime {
+		font-size: 3em;
+		color: #EF4836;
+}
+
+#skill_charts {
+	width: 90%;
+	margin: auto;
+}

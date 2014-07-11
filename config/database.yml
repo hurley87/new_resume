@@ -21,6 +21,6 @@ test:
   database: db/test.sqlite3
 
 production:
-  dapter: postgresql
-database: rainforest
-host: localhost
+  adapter: postgresql
+  database: resume
+  host: localhost

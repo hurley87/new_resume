@@ -24,24 +24,6 @@ $(document).ready(function() {
 			var game = new Game();
       game.start();
 
-      
-
-      setInterval(function () {
-       var colors = ["#9A12B3", "#F62459", "#52B3D9", "#2ECC71", "#F89406", "#F7CA18", "#D35400"];
-       var rand =  Math.floor((Math.random() * colors.length));
-       var x = Math.floor((Math.random() * 800));
-       var y = Math.floor((Math.random() * 800));
-       $('.circle2').css({
-          left: x,
-          top: y,
-          opacity: 0.3,
-          backgroundColor: colors[rand]
-        });
-       $('.container').append("<div class='circle2'></div>");
-       $('.circle2').show(1000).hide(1000);
-
-    }, 4000);
-
 
       $('#quote').text("Creativity is intelligence having fun.").fadeIn().fadeOut(3500);
      setInterval(function () {

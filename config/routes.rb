@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'new/create'
+
+  get 'new/index'
+
   resources :sessions, :only => [ :new, :create ]
   get 'sessions/destroy' => 'sessions#destroy'
   root  'users#new'

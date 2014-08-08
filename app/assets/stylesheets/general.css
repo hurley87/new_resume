@@ -1,0 +1,51 @@
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+body {
+	font-family: 'Lora', serif !important;
+	margin: 0;
+	padding: 0;
+}
+
+.pull-right {
+	float: right;
+}
+
+.center {
+	text-align: center;
+}
+.clear {
+	clear: both;
+}
+.text-right {
+	text-align: right;
+}
+.container {
+	width: 80%;
+	margin: auto;
+}
+
+.message {
+	margin: 100px;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 2px;
+	line-height: 125%;
+	font-size: 1.5em;
+}
+
+#game {
+	height: 200px;
+	width: 75%;
+	float:left;
+	margin-left: 100px;
+}
+
+#time_best {
+	font-size: 0.2em;
+	color: black;
+}
+
+#plus_five {
+	margin-right: 40px;
+
+}

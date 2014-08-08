@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'new/create'
-
-  get 'new/index'
+  resources :projects, only: [ :new, :create, :show, :index]
 
   resources :sessions, :only => [ :new, :create ]
   get 'sessions/destroy' => 'sessions#destroy'

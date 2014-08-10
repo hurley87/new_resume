@@ -37,6 +37,14 @@ gem 'spring',        group: :development
  gem 'pry'
 
 gem 'rails_12factor', group: :production
+gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
+gem 'underscore-rails'
+ gem 'backbone-on-rails'
+group :test do
+	gem 'capybara'
+	gem 'rspec-rails'
+	gem 'poltergeist'
+end
 
 # Use unicorn as the app server
 # gem 'unicorn'

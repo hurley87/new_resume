@@ -5,7 +5,7 @@
 $primaryColor: #EF4836;
 
 header {
-	background-color: #EF4836;
+	background-color: $primaryColor;
 	margin: 0;
 	color: white;
 
@@ -99,7 +99,11 @@ header {
 
 	}
 
-	.submit_btn {
+	
+
+}
+
+.submit_btn {
 	background-color: white;
 	border: 1px solid black;
 	border-radius: 5px;
@@ -110,8 +114,6 @@ header {
 		color: $primaryColor;
 		border: 1px solid $primaryColor;	
 	}
-}
-
 }
 
 
